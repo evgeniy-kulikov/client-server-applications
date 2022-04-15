@@ -28,9 +28,9 @@ def read_file(file_name):
             print(el_str, end='')
 
 
-user_encoding = 'cp1251'
-content = ['сетевое программирование', 'сокет', 'декоратор']
-file_name = 'test_file.txt'
+user_encoding_1 = 'cp1251'
+content_1 = ['сетевое программирование', 'сокет', 'декоратор']
+file_name_1 = 'test_file.txt'
 
-create_file(content, file_name, user_encoding)
-read_file(file_name)
+create_file(content_1, file_name_1, user_encoding_1)
+read_file(file_name_1)

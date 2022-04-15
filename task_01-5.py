@@ -1,5 +1,8 @@
 # Homework for lesson 1
 
+# 05. Выполнить пинг веб-ресурсов yandex.ru, youtube.com
+# и преобразовать результаты из байтовового в строковый тип на кириллице.
+
 import subprocess
 import platform  # определение семейства OS
 import chardet  # сторонний пакет определяющий тип кодировки
