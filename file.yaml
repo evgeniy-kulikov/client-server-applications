@@ -1,0 +1,11 @@
+Name_product:
+- computer
+- monitor
+- mouse
+- printer
+items_price:
+  computer: 500€-1000€
+  monitor: 200€-500€
+  mouse: 4€-20€
+  printer: 100€-500€
+items_quantity: 4

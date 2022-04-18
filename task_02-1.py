@@ -23,7 +23,6 @@ import csv
 
 def get_data():  # функция получения данных из исходных файлов
     data = []  # список с выборкой данных из исходных файлов
-    # source_files = ['info_1.txt', 'info_2.txt', 'info_3.txt']
 
     for filename in source_files:
         with open(filename) as fl:
@@ -56,6 +55,6 @@ def write_to_csv():  # функция создания *.csv файла
             writer.writerow(line)  # запись сразу всех данных
 
 
-if __name__ == '__main__':
-    source_files = ['info_1.txt', 'info_2.txt', 'info_3.txt']
-    write_to_csv()
+# для простоты файлы с данными находятся в одной директории со скриптом
+source_files = ['info_1.txt', 'info_2.txt', 'info_3.txt']
+write_to_csv()
