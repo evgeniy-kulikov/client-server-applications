@@ -25,7 +25,7 @@ data = {
 }
 
 with open('file.yaml', 'w', encoding='utf-8') as yaml_file:
-    yaml.dump(data, yaml_file, default_flow_style=False, allow_unicode=True)
+    yaml.dump(data, yaml_file, default_flow_style=False, allow_unicode=True, sort_keys=False)
 
 with open('file.yaml', encoding='utf-8') as yaml_file:
     print(yaml_file.read())
