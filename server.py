@@ -79,6 +79,10 @@ def setup_ip():
 
 
 def main_server():
+    """
+    Запуск серверной части
+    :return:
+    """
     listen_ip_address = setup_ip()
     listen_port = setup_port()
 
@@ -89,7 +93,7 @@ def main_server():
 
     # прослушиваем порт
     server_socket.listen(MAX_CONNECTIONS)
-    print(f'Сервер готов принять клиента по вдресу: {listen_ip_address} (если пусто - любой адрес)\n')
+    print(f'Сервер готов принять клиента по адресу: {listen_ip_address} (если пусто - любой адрес)\n')
 
     while True:
         client, client_ip_address = server_socket.accept()

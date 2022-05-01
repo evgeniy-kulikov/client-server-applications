@@ -38,11 +38,12 @@ def process_answer(message):  # обработка сообщения
             return 'code 200 : OK'
         return f'code 400 : {message[ERROR]}'  # ошибка запроса (сторона клиента)
     raise ValueError
- 
 
-def main_client():
+
+# Установка  значений IP адреса и порта оформлены в вмде отдельной функции для прогонки в "unitest"
+def setup_ip_port():
     """
-    Функция загрузки параметров командной строки
+    Загрузка параметров командной строки. Если параметров нет, то берутся значения по умолчанию.
     :return:
     """
     try:
@@ -58,7 +59,17 @@ def main_client():
     except ValueError:
         print('Номер порта должен соответствовать диапазону от 1024 до 65535')
         sys.exit(1)
+    return server_address, server_port
 
+
+def main_client():
+    """
+    Функция запуска клиентской части
+    :return:
+    """
+    port_ip = setup_ip_port()
+    server_address = port_ip[0]
+    server_port = port_ip[1]
     # активация сокета, обмен сообщениями
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     client_socket.connect((server_address, server_port))
@@ -74,3 +85,4 @@ def main_client():
 
 if __name__ == '__main__':
     main_client()
+
